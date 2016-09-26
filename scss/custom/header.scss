@@ -1,0 +1,74 @@
+$m-header-separator-color: #fff !default;
+$m-header-separator-opacity: 0.2 !default;
+.m-header-bg-gradient {
+	background-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.m-header {
+	@extend %clearfix;
+	position: relative;
+	padding: 26px 0;
+	display: inline-block;
+	width: 100%;
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		height: 1px;
+		background-color: $m-header-separator-color;
+		opacity: $m-header-separator-opacity;
+	}
+	&__logo {
+		float: left;
+		display: block;
+		margin: 10px 0;
+		&-link {
+			position: relative;
+			line-height: 0;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: -30px;
+				width: 1px;
+				background-color: $m-header-separator-color;
+				opacity: $m-header-separator-opacity;
+			}
+		}
+			&-img-holder {
+				display: inline-block;
+				max-width: 90px;
+			}
+	}
+	&__number {
+		margin-left: 50px;
+		padding-left: 20px;
+		position: relative;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-size: 13px;
+		text-transform: uppercase;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 14px;
+			background-image: url('../images/phone-ico.png');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.m-header {
+		&__logo {
+			margin: 5px 0;
+		}
+	}
+}
