@@ -1,0 +1,116 @@
+$main-nav-width: initial !default;
+$main-nav-overlay-color: $block-brand-bg !default;
+$main-nav-overlay-opacity: 0.9 !default;
+
+.m-nav {
+	float: right;
+	&__toggler-chbox {
+		display: none;
+		&:checked ~ .m-nav__inner {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	&__toggler {
+		display: block;
+		padding: 14px;
+		width: 50px;
+		overflow: hidden;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		&:focus {
+			outline: none;
+		}
+		&-hamburger-line {
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #fff;
+		}
+		&-hamburger-line + &-hamburger-line {
+			margin-top: 4px;
+		}
+	}
+		&__inner {
+			position: absolute;
+		 	top: 100%;
+		 	right: 0;
+		 	width: $main-nav-width;
+		 	height: initial;
+			z-index: 1;
+
+			transition: all .25s linear;
+			transform: translateX(150%);
+			opacity: 0;
+			will-change: opacity, transform;
+				&:after  {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+					background-color: mix($main-nav-overlay-color, black);
+					opacity: $main-nav-overlay-opacity;
+				}
+		}
+		&__list {
+			@extend %no-text-list-styles;
+		}
+			&__item {
+				display: block;
+				&_active {
+
+				}
+			}
+				&__link {
+					display: block;
+					font-family: 'Montserrat', Arial, sans-serif;
+					font-size: 13px;
+					text-transform: uppercase;
+				}
+				&__link:not(.btn) {
+					padding: 14px 10px;
+					&:hover {
+						opacity: 1;
+						background-color: rgba(0, 0, 0, 0.25);
+
+					}
+				}
+}
+
+@media screen and (min-width: 768px) {
+	.m-nav {
+		&__toggler {
+			display: none;
+		}
+		&__inner {
+			display: block;
+			position: static;
+			width: initial;
+			background-color: initial;
+			transform: initial;
+			opacity: initial;
+			&:after {
+				display: none;
+			}
+		}
+			&__item {
+				display: inline-block;
+				margin-right: 16px;
+				&:last-child {
+					margin-right: 0;
+				}
+				& .m-nav__link:not(.btn):hover {
+						background-color: initial;
+					}
+			}
+				&__link:not(.btn) {
+					padding: 0 7px;
+					opacity: 0.7;
+				}
+
+
+	}
+}
