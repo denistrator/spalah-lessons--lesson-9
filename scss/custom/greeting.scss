@@ -1,0 +1,13 @@
+.greeting {
+	&__title {
+		font-weight: 400;
+		margin: auto 0 auto;
+		line-height: 1.2;
+	}
+	&__description {
+		margin-top: 11px;
+	}
+	&__btn {
+		margin-top: 7px;
+	}
+}
