@@ -1,0 +1,43 @@
+$btn-neutral-opacity: 0.5 !default;
+.btn {
+	&-neutral {
+		@include btn-variants( 
+		    $color: inherit, 
+			$bg: transparent, 
+			$border: inherit
+		    ){
+			position: relative;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: -1;
+				background-color: #fff;
+				opacity: 0.32;
+				border-radius: $btn-border-radius;
+			}
+		}
+		&:hover {
+				@include btn-variants( 
+			    $color: inherit, 
+			    $bg: transparent, 
+			    $border: inherit
+			    ){
+				&:after {
+					background-color: $btn-bg-hover;
+					opacity: 1;
+				}
+			}
+		}
+		@include btn-size($font-size: inherit,
+						  $padding: 6px 12px,
+						  $radius: $btn-border-radius
+						  );
+	}
+}
+
+
