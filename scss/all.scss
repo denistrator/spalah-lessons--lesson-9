@@ -5,10 +5,16 @@
 
 @import "components/global.scss";
 @import "components/type.scss";
+@import "custom/type.scss";
 @import "components/btns.scss";
+@import "custom/btns.scss";
 @import "components/forms.scss";
 @import "components/blocks.scss";
 @import "components/grid.scss";
 
 // @import "custom/h-cards.scss";
 @import "custom/main.scss";
+
+@import "custom/header.scss";
+@import "custom/navigation.scss";
+@import "custom/greeting.scss";
