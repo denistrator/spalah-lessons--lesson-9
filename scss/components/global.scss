@@ -4,6 +4,7 @@ $container-padding-x: 10px !default;
 
 html {
 	box-sizing: border-box;
+	height: 100%;
 }
 
 *,
@@ -15,6 +16,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 img {
@@ -54,11 +56,19 @@ ul {
     margin: auto;
 }
 
+.inline-block-align > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .wrapper {
 	overflow: hidden;
 	display: table;
 	width: 100%;
+	height: 100%;
 	height: 100vh;
+	max-width: 1920px;
+	margin: 0 auto;
 	table-layout: fixed;
 }
 

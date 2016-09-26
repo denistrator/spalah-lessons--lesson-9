@@ -1,21 +1,26 @@
 $btn-color: #333 !default;
-$btn-font-size: 16px !default;
+$btn-color-hover: lighten($btn-color, 10%) !default;
+
 $btn-bg: #ddd !default;
+$btn-bg-hover: lighten($btn-bg, 10%) !default;
+
 $btn-border: 1px solid $btn-bg !default;
+$btn-border-color-hover: lighten($btn-bg, 10%) !default;
+
+$btn-font-family: inherit !default;
+$btn-font-size: 16px !default;
 $btn-border-radius: 4px !default;
 $btn-padding: 10px 20px !default;
+$btn-text-transform: uppercase !default;
 
-$btn-color-hover:  #333 !default;
-$btn-bg-hover: #ddd !default;
-$btn-border-color-hover: #ddd !default;
 
 @mixin btn-variants( 
     $color, 
     $bg, 
     $border, 
-    $color-hover: lighten($color, 10%), 
-    $bg-hover: lighten($bg, 10%), 
-    $border-hover: lighten($border, 10%)
+    $color-hover: $btn-color-hover, 
+    $bg-hover: $btn-bg-hover, 
+    $border-hover: $btn-border-color-hover
     ) {
     color: $color;
     background: $bg;
@@ -41,11 +46,13 @@ $btn-border-color-hover: #ddd !default;
     cursor: pointer;
     font-weight: normal;
     color: $btn-color;
+    font-family: $btn-font-family;
     font-size: $btn-font-size;
     background: $btn-bg;
     border: $btn-border;
     border-radius: $btn-border-radius;
     padding: $btn-padding;
+    text-transform: $btn-text-transform;
 
     &:hover {
         color: $btn-color-hover;
