@@ -1,11 +1,11 @@
-.m-nav__list {
+.m-nav__list, .features {
   margin: 0;
   padding: 0;
   font-size: 0;
   list-style: none;
 }
 
-.m-nav__list li {
+.m-nav__list li, .features li {
   font-size: initial;
 }
 
@@ -40,8 +40,8 @@ img {
   height: auto;
 }
 
-div[class$="logo-holder"],
-div[class$="img-holder"] {
+div[class*="logo-holder"],
+div[class*="img-holder"] {
   font-size: 0;
 }
 
@@ -78,6 +78,10 @@ ul {
   vertical-align: middle;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .wrapper {
   overflow: hidden;
   display: table;
@@ -91,7 +95,7 @@ ul {
 
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1070px;
   padding: 0 10px;
 }
 
@@ -141,7 +145,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 400;
   color: #0f5f5c;
   text-transform: capitalize;
 }
@@ -184,6 +188,10 @@ h6,
 
 .heading-lg {
   font-size: 38px;
+}
+
+h2, .h2 {
+  font-weight: 400;
 }
 
 .btn {
@@ -320,7 +328,6 @@ h6,
 }
 
 .block {
-  padding: 20px 0;
   display: table;
   width: 100%;
   table-layout: fixed;
@@ -431,16 +438,62 @@ h6,
   font-size: 15px;
 }
 
-.block-xs {
-  padding: 5px 0;
+.block-padding-xs {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.block-sm {
-  padding: 15px 0;
+.block-padding-sm {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 7.00935%;
+  padding-bottom: 7.00935%;
 }
 
-.block-lg {
-  padding: 30px 0;
+.block-padding-md {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 8.97196%;
+  padding-bottom: 8.97196%;
+}
+
+.block-padding-lg {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.block-title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.block-title + .block-description {
+  position: relative;
+}
+
+.block-title + .block-description:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -19px;
+  left: -50%;
+  right: -50%;
+  width: 65px;
+  height: 1px;
+  margin: auto;
+  background-color: #6fb048;
+}
+
+.block-padding-top_69 {
+  padding-top: 6.4486%;
+}
+
+.block-padding-top_53 {
+  padding-top: 4.95327%;
 }
 
 .row {
@@ -488,6 +541,9 @@ h6,
   }
   .col-xxs-12 {
     width: 100%;
+  }
+  .col-xxs-offset-0 {
+    margin-left: 0%;
   }
   .col-xxs-offset-1 {
     margin-left: 8.33333%;
@@ -564,6 +620,9 @@ h6,
   .col-xs-12 {
     width: 100%;
   }
+  .col-xs-offset-0 {
+    margin-left: 0%;
+  }
   .col-xs-offset-1 {
     margin-left: 8.33333%;
   }
@@ -638,6 +697,9 @@ h6,
   }
   .col-sm-12 {
     width: 100%;
+  }
+  .col-sm-offset-0 {
+    margin-left: 0%;
   }
   .col-sm-offset-1 {
     margin-left: 8.33333%;
@@ -714,6 +776,9 @@ h6,
   .col-md-12 {
     width: 100%;
   }
+  .col-md-offset-0 {
+    margin-left: 0%;
+  }
   .col-md-offset-1 {
     margin-left: 8.33333%;
   }
@@ -788,6 +853,9 @@ h6,
   }
   .col-lg-12 {
     width: 100%;
+  }
+  .col-lg-offset-0 {
+    margin-left: 0%;
   }
   .col-lg-offset-1 {
     margin-left: 8.33333%;
@@ -1036,6 +1104,90 @@ h6,
 
 .greeting__btn {
   margin-top: 7px;
+}
+
+.features {
+  margin: 0 -20px;
+  margin-top: -4.6729%;
+}
+
+.features__item {
+  padding: 0 20px;
+  padding-top: 4.6729%;
+}
+
+.features__item_center {
+  text-align: center;
+}
+
+.features__img-holder {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.features__img-holder_md {
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+}
+
+.features__img-holder_sm {
+  line-height: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.features__img-holder_full-with {
+  width: 100%;
+  margin-bottom: 11px;
+}
+
+.features__img {
+  vertical-align: middle;
+}
+
+.features__title {
+  display: inline-block;
+  margin: 15px 20px;
+}
+
+.features__desc {
+  margin-bottom: 0;
+}
+
+.features-separator {
+  margin: 0 auto;
+  margin-top: 2.99065%;
+  padding-bottom: 8.59813%;
+  width: 90px;
+  position: relative;
+}
+
+.features-separator .v-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.features-separator .v-line-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  width: 2px;
+  background-color: #f2f2f2;
+}
+
+.features-separator .h-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #f2f2f2;
 }
 
 /*# sourceMappingURL=all.css.map */
