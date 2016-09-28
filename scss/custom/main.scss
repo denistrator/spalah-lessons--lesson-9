@@ -1,8 +1,43 @@
+.example {
+	display: table;
+	margin-top: 22px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	// padding-left: 415px;
+	padding-left: 512px;
+	min-height: 485px;
+	max-height: 485px;
+	overflow: hidden;
+}
 
+@media screen and (max-width: 768px) {
+	.example {
+		background-image: none;
+		background-size: 0;
+		padding-left: 0;
+	}
+}
 
+.block-with-quote {
+	display: table;
+	padding-top: 140 / 1070 * 100%;
+	padding-bottom: 140 / 1070 * 100%;
+	&__img-holder {
+		
+	}
+	&__name {
+		color: $accent-color;
+	}
+	&__position{
+		
+	}
+}
 
-
-
+.lead {
+	font-family: 'Merriweather', serif;
+	font-size: 22px;
+	line-height: 1.82;
+}
 
 
 

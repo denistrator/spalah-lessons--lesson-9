@@ -1,3 +1,5 @@
+$block-light-bg: #EEFFFD !default;
+
 .block {
 	&-title {
 		margin: 0;
@@ -16,6 +18,11 @@
 			height: 1px;
     		margin: auto;
 			background-color: $accent-color;
+		}
+	}
+	&-bg {
+		&_light {
+			background-color: $block-light-bg;
 		}
 	}
 	&-padding-top {

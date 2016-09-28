@@ -12,6 +12,7 @@ $dev: false !default;
 [class*="col-"] {
     padding: 0 $grid-gutter;
     float: left;
+    width: 100%; // !
     @if $dev == true {
     	padding: 10px;
     	outline: 1px solid red;
