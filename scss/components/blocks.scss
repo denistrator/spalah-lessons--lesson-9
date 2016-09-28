@@ -7,6 +7,9 @@ $block-padding-x-xs:    0 !default;
 $block-padding-y-sm:    15px !default;
 $block-padding-x-sm:    0 !default;
 
+$block-padding-y-md:    20px !default;
+$block-padding-x-md:    0 !default;
+
 $block-padding-y-lg:    30px !default;
 $block-padding-x-lg:    0 !default;
 
@@ -33,7 +36,6 @@ $overlay-opacity: 0.8 !default;
 
 
 .block {
-	padding: $block-padding-y $block-padding-x;
 	display: table;
 	width: 100%;
 	table-layout: fixed;
@@ -129,13 +131,24 @@ $overlay-opacity: 0.8 !default;
 	}
 
 	// size
-	&-xs {
-		padding: $block-padding-y-xs $block-padding-x-xs;
+	&-padding-xs {
+		padding-left: $block-padding-x-xs;
+		padding-right: $block-padding-x-xs;
+		@include paddings-y($block-padding-y-xs);
 	}
-	&-sm {
-		padding: $block-padding-y-sm $block-padding-x-sm;
+	&-padding-sm {
+		padding-left: $block-padding-x-sm;
+		padding-right: $block-padding-x-sm;
+		@include paddings-y($block-padding-y-sm);
 	}
-	&-lg {
-		padding: $block-padding-y-lg $block-padding-x-lg;
+	&-padding-md {
+		padding-left: $block-padding-x-md;
+		padding-right: $block-padding-x-md;
+		@include paddings-y($block-padding-y-md);
+	}
+	&-padding-lg {
+		padding-left: $block-padding-x-lg;
+		padding-right: $block-padding-x-lg;
+		@include paddings-y($block-padding-y-lg);
 	}
 }

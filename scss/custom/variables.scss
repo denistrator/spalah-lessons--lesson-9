@@ -1,3 +1,6 @@
+$accent-color: #6fb048;
+// global
+$container-max-width: 1070px;
 // type
 $body-color: #83a7a5;
 $body-bg: #fff;
@@ -7,7 +10,7 @@ $line-height-base: 1.57;
 $font-family-base: Roboto, Arial, sans-serif;
 $link-color: #0f5f5c;
 
-$heading-font-weight: 300;
+$heading-font-weight: 400;
 $heading-font-transform: capitalize;
 $heading-color: #0f5f5c;
 $heading-font-size-1: 36px;
@@ -20,7 +23,7 @@ $heading-font-size-6: 12px;
 // btn
 $btn-color: #fff;
 $btn-font-size: 13px;
-$btn-bg: #6fb048;
+$btn-bg: $accent-color;
 $btn-border: none;
 $btn-border-radius: 2px;
 $btn-padding: 12px 22px 11px;
@@ -36,8 +39,11 @@ $btn-neutral-opacity: 0.32;
 // $block-padding-y-xs:    5px;
 // $block-padding-x-xs:    0;
 
-// $block-padding-y-sm:    15px;
+$block-padding-y-sm:    75 / 1070 * 100%;
 // $block-padding-x-sm:    0;
+
+$block-padding-y-md:    96 / 1070 * 100%;
+// $block-padding-x-md:    0;
 
 // $block-padding-y-lg:    30px;
 // $block-padding-x-lg:    0;

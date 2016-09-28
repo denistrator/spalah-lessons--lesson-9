@@ -36,7 +36,7 @@ $breakpoint: (
                 width: 100% / $grid-columns * $i;
             }    
         }
-        @for $i from 1 through $grid-columns {
+        @for $i from 0 through $grid-columns {
             .col-#{$key}-offset-#{$i} {
                 margin-left: 100% / $grid-columns * $i;
             }

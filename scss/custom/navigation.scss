@@ -56,7 +56,7 @@ $main-nav-overlay-opacity: 0.9 !default;
 				}
 		}
 		&__list {
-			@extend %no-text-list-styles;
+			@extend %list-styles-reset;
 		}
 			&__item {
 				display: block;

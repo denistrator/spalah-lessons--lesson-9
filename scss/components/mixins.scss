@@ -1,11 +1,11 @@
-%no-text-list-styles {
+%list-styles-reset {
 	margin: 0;
 	padding: 0;
 	font-size: 0;
 	list-style: none;
 }
 
-%no-text-list-styles li {
+%list-styles-reset li {
 	font-size: initial;
 }
 
@@ -24,30 +24,9 @@
 	transition: all .25s linear;
 }
 
-@mixin indent-reset($val) {
-	@if $val == left {
-		margin-left: 0;
-		padding-left: 0;
-	}
-	@if $val == rigth {
-		margin-rigth: 0;
-		padding-rigth: 0;
-	}
-	@if $val == top {
-		margin-top: 0;
-		padding-top: 0;
-	}
-	@if $val == bottom {
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
-	@if $val == all {
-		margin: 0;
-		padding: 0;
-	}
-	@if null {
-		
-	}
+@mixin paddings-y($padding-top, $padding-bottom:$padding-top){
+	padding-top: $padding-top;
+	padding-bottom: $padding-bottom;
 }
 
 @function find-the-proportion($width, $height) {

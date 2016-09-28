@@ -21,7 +21,7 @@ $h-card-footer-content-align: middle !default;
 
 .h-cards {
 	&__elems {
-		@extend %no-text-list-styles;
+		@extend %list-styles-reset;
 		margin: -($h-cards-margin);
     	overflow: hidden;
 	}

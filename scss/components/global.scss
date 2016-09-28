@@ -1,3 +1,5 @@
+$accent-color: #00e0d0 !default;
+
 $container-max-width: 960px !default;
 $container-padding-y: 0 !default;
 $container-padding-x: 10px !default;
@@ -24,8 +26,8 @@ img {
 	height: auto;
 }
 
-div[class $="logo-holder"],
-div[class $="img-holder"] {
+div[class *="logo-holder"],
+div[class *="img-holder"] {
 	font-size: 0;
 }
 
@@ -59,6 +61,12 @@ ul {
 .inline-block-align > * {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.text {
+	&-center {
+		text-align: center;
+	}
 }
 
 .wrapper {
